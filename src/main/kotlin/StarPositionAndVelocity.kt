@@ -4,7 +4,7 @@ data class StarPositionAndVelocity(
     var time: Int = 0
 ) {
     //movement of starts
-    fun movement(t: Int) : StarPositionAndVelocity {
+    fun movement(t: Int): StarPositionAndVelocity {
 
         positionX = positionX * velocityX + time
         velocityX = positionY * velocityY + time

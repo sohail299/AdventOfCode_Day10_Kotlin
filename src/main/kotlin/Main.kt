@@ -26,8 +26,6 @@ fun printImage(minimum: List<StarPositionAndVelocity>) {
             else
                 print("_")
         }
-
-
     }
 
 }
@@ -45,12 +43,9 @@ fun closestDistance(star: List<StarPositionAndVelocity>): Int {
 
 //split input values
 fun splitInput(input: String): StarPositionAndVelocity {
-    val list: ArrayList<String> = ArrayList()
+
     input.split(",", "<", ">").map { it.trim() }.run {
-        list.add(this[1])
-        list.add(this[2])
-        list.add(this[4])
-        list.add(this[5])
+
         return StarPositionAndVelocity(
             (this[1].toInt()),
             (this[2].toInt()),
