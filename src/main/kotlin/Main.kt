@@ -9,10 +9,27 @@ fun main(args: Array<String>) {
         //   minimum(input)
         val minimum = (0..1000).map { t -> input.map { it.movement(t) } }
             .minBy { d -> closestDistance(d) }
-        println("t=${minimum.first().time}")
+        println("minimum Time =${minimum.first().time}")
+        printImage(minimum)
     } catch (e: FileNotFoundException) {
         println("Input File not found")
     }
+}
+
+//printing star pattern
+fun printImage(minimum: List<StarPositionAndVelocity>) {
+    for (star in minimum) {
+        println()
+        for (i in 0 until 100000) {
+            if (i == star.positionX || i == star.positionY)
+                print("#")
+            else
+                print("_")
+        }
+
+
+    }
+
 }
 
 //Get the closest minimum distance Time among stars
