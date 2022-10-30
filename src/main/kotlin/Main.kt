@@ -18,7 +18,7 @@ fun minimum(input: List<StarPositionAndVelocity>){
     for(i in input.indices){
        var t = input.map { it.movement(i) }
 
-        println("${t[i].posX}     ${t[i].posY}   ${t[i].t}")
+        println("${t[i].positionX}     ${t[i].positionY}   ${t[i].time}")
 
     }
 }
